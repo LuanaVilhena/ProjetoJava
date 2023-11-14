@@ -8,6 +8,8 @@ public class Main {
         System.out.println("Escolha uma opção:");
         System.out.println("1. Cadastrar Voluntário");
         System.out.println("2. Cadastrar Associação");
+        System.out.println("3. Listar cadastros");
+        System.out.println("4. Sair");
 
         int opcao = scanner.nextInt();
             scanner.nextLine();
@@ -18,10 +20,11 @@ public class Main {
         break;
         case 2:
         cadastrarPessoa(pc, new CadAssociacoes(), scanner);
-        //A parte de associações tem que ficar exatamente com esse nome
         break;
         case 3:
         pc.listar();
+        break;
+        case 4:
         break;
         default:
         System.out.println("Opção inválida");
@@ -41,8 +44,12 @@ public class Main {
         ((CadVoluntarios) pessoa).setIdade(scanner.nextInt());
         System.out.println("Digite o endereço: ");
         ((CadVoluntarios) pessoa).setEndereco(scanner.next());
+        pc.cadastrarPessoa(pessoa);
         }
-    //Adicionar a parte de associações
+    if (pessoa instanceof CadAssociacoes) {
+        System.out.println("Digite o CNPJ:");
+        ((CadAssociacoes) pessoa).setCnpj(scanner.nextInt());
     pc.cadastrarPessoa(pessoa);
+    }
     }
 }
