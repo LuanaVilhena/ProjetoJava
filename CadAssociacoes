@@ -1,0 +1,25 @@
+public class CadAssociacoes extends Cadastro {
+
+
+    private int idade;
+    private String endereco;
+    private int cnpj;
+
+
+    public void setIdade(int idade) {
+        this.idade = idade;
+    }
+
+    public void setEndereco(String endereco) {
+        this.endereco = endereco;
+    }
+
+    public void setCnpj(int cnpj) {
+        this.cnpj = cnpj;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + ", Tipo: Associado, Idade: " + idade + ", Endereço: " + endereco + ", CNPJ: " + cnpj;
+    }
+}
