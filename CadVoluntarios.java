@@ -21,6 +21,6 @@ public class CadVoluntarios extends Cadastro {
 
     @Override
     public String toString() {
-    return super.toString() + ", Tipo: Voluntário" + "Idade: " + idade + "Endereço: " + endereco;
+    return super.toString() + ", Tipo: Voluntário" + " Idade: " + idade + " Endereço: " + endereco;
     }
 }
