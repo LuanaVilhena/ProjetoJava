@@ -29,6 +29,6 @@ public class Cadastro {
 
     @Override
     public String toString() {
-    return "Nome: " + nome + "E-mail: " + email + "Telefone: " + telefone;
+    return "Nome: " + nome + " E-mail: " + email + " Telefone: " + telefone;
     }
 }
